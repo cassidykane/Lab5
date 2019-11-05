@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="ai_check_box_pref"
+        android:title="Enable AI"
+        android:summary="Play against the computer."
+        android:defaultValue="false" />
+    <ListPreference
+        android:dialogTitle="Select number of dice"
+        android:entries="@array/number_of_dice_options"
+        android:entryValues="@array/number_of_dice_values"
+        android:key="number_of_dice_list_pref"
+        android:summary="Set the number of dice to play with."
+        android:title="Number of Dice" />
+
+    <CheckBoxPreference
+        android:key="points_to_win_check_box_pref"
+        android:title="Set Winning Score"
+        android:summary="Enter the number of points to win."
+        android:defaultValue="false" />
+    <EditTextPreference
+        android:key="points_to_win_edit_text_pref"
+        android:title="Score Threshold"
+        android:dialogTitle="Enter a score number"
+        android:defaultValue="100"
+        android:dependency="points_to_win_check_box_pref"
+        />
+</PreferenceScreen>

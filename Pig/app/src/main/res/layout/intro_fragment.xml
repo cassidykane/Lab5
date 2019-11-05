@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pigPortrait"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroActivity">
+
+    <EditText
+        android:id="@+id/player1EditText"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/player2EditText"
+        app:layout_constraintStart_toStartOf="@+id/player1Label"
+        app:layout_constraintTop_toTopOf="@+id/player2EditText" />
+
+    <EditText
+        android:id="@+id/player2EditText"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/rulesTextView"
+        app:layout_constraintStart_toStartOf="@+id/player2Label"
+        app:layout_constraintTop_toBottomOf="@+id/player2Label" />
+
+    <TextView
+        android:id="@+id/player1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginBottom="2dp"
+        android:text="Player 1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/player1EditText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/player2Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="68dp"
+        android:text="Player 2"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rulesTextView"
+        android:layout_width="306dp"
+        android:layout_height="238dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="129dp"
+        android:layout_marginBottom="127dp"
+        android:text="The “Big Pig” version of the game is a dice game with 2 players and one die, but it is an 8-sided die. Each player rolls the die as many times as they wish or until they roll an 8. Their score for the turn is the sum of their rolls unless they get an 8, then it’s zero. When they roll an 8, the “Roll Die” button should be disabled, re-enable it when the next player starts their turn Players keep taking turns rolling until someone gets to 100. If the player who had the first roll reaches 100, the second player may still take their turn. The player with the highest score wins."
+        app:layout_constraintBottom_toBottomOf="@+id/newGameButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/player1Label" />
+
+    <Button
+        android:id="@+id/newGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="181dp"
+        android:text="New Game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
